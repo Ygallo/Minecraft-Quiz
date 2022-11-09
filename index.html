@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- |Goggle fonts and favicon-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/b03bc5fab6.js" crossorigin="anonymous"></script>
+   
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Minecraft Quiz</title>
 </head>
@@ -12,8 +22,39 @@
     <section>
         <div>
             <h2>Question</h2>
+            <input type="radio" id="radioA" name="radio1" value="A">
+            <label for="radioA">A</label><br>
+            <input type="radio" id="radioB" name="radio1" value="B">
+            <label for="radioB">B</label><br> 
+            <input type="radio" id="radioC" name="radio1" value="C">
+            <label for="radioC">C</label><br>
+            <input type="radio" id="radioD" name="radio1" value="D">
+            <label for="radioD">D</label><br>
+            <input type="submit">
+        </div>
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="correct">0</span></p>
+            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        </div>
+
+        <div>
+            <p class="total-score">Total Score<span id="total">0</span></p>
         </div>
     </section>
+
+    <!-- Social media icons and link on footer -->
+    <footer>
+        <ul>
+            <li>
+                <a href="https://facebook.com" target="_blank" rel="nooper" 
+                aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="nooper" 
+                aria-label="Visit our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
