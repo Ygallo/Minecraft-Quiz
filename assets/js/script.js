@@ -6,8 +6,8 @@
     {
         question: 'In what year was Minecraft fully released?',
         answerA: 2012,
-        answerB:2011,
-        answerC:2007,
+        answerB: 2011,
+        answerC: 2007,
         answerD: 2010,
         correct: 1,
     }, {
@@ -26,53 +26,53 @@
         correct: 0,
     }, {
         question: 'Which of the following cannot be tamed?',
-        answerA: 'wolf',
-        answerB: 'ocelot',
-        answerC: 'chicken',
-        answerD: 'horse',
+        answerA: 'Wolf',
+        answerB: 'Ocelot',
+        answerC: 'Chicken',
+        answerD: 'Horse',
         correct: 2,
     },/* {
         question: 'What item do you need to make all of the potions?',
         answerA: 'Water bottle',
-        answerB:
-        answerC:
-        answerD: 
-        correct: 'answerA',
+        answerB: 'Gun powder',
+        answerC: 'Blaze Powder',
+        answerD: 'Nether Wart'
+        correct: 0,
     },{
         question: 'Which species began due to a coding error?',
-        answerA: 
-        answerB:
-        answerC:
+        answerA: 'Slime'
+        answerB: 'Piglin'
+        answerC: 'Drowned'
         answerD: 'Creeper ',
-        correct: 'answerD',
+        correct: 3,
     },{
         question: 'What must you use to mine ores and stones?',
-        answerA:  ' Pickaxe',
-        answerB:
-        answerC:
-        answerD: 
-        correct: 'answerA'
+        answerA: 'Iron Pickaxe',
+        answerB: 'Axe'
+        answerC: 'Stone Pickaxe'
+        answerD: 'Wooden Pickaxe'
+        correct: 0,
     },{
         question: 'To make one iron ingot, how many slabs of iron ore do you need?',
         answerA: 2,
         answerB: 0,
         answerC: 1,
         answerD: 5,
-        correct: 'answerC'
+        correct: 2,
     },{
         question: 'Axolotl can come in how many different colors?',
         answerA: 5,
         answerB: 6,
         answerC: 2,
         answerD: 7,
-        correct: 'answerA,
+        correct: 0,
     },{
-        question: 
-        answerA: 
-        answerB:
-        answerC:
-        answerD: 
-        correct: 
+        question: 'Which creature has 2 hearts?',
+        answerA: 'Chicken',
+        answerB: 'Fish',
+        answerC: 'Rabbit',
+        answerD: 'Pig',
+        correct: 0,
     }*/
     ];
 
@@ -165,8 +165,9 @@ function incrementScore() {
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore;
-
 }
+
+
 
 function totalScore() {
 

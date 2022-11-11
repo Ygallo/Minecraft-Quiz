@@ -1,3 +1,41 @@
-body {
-    background-color: bisque;
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #302C1F;
+}
+
+/*header and logo*/
+
+h1 {
+    font-family: "fira sans", sans-serif;
+    color: #B7C64F;
+    letter-spacing: 5px;
+    font-size: 70px;
+    margin: 3rem;
+}
+
+.container {
+width: 100vw;
+margin: 0 auto;
+justify-items: center;
+align-items: center;
+padding: 2rem;
+max-width: 80rem;
+}
+
+input[type='radio'] {
+    box-sizing: border-box;
+    appearance: none;
+    background: #E9F1C1;
+    border: 3px solid #B7C64F;
+    width: 24px;
+    height: 24px;
+}
+
+input[type='radio']:checked {
+    background: #8A5E24;
+  }
