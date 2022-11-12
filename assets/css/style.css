@@ -16,7 +16,10 @@ h1 {
     letter-spacing: 5px;
     font-size: 70px;
     margin: 3rem;
+    text-align: center;
 }
+
+/* Quiz questions and answers*/
 
 .container {
 width: 100vw;
@@ -34,8 +37,48 @@ input[type='radio'] {
     border: 3px solid #B7C64F;
     width: 24px;
     height: 24px;
+    padding: 10px;
+    
 }
 
 input[type='radio']:checked {
     background: #8A5E24;
   }
+
+#submit {
+    font-size: 20px;
+    padding: 10px;
+    font-family: "open sans", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color:#E9F1C1;
+    background-color: #8A5E24;
+    margin-top: 20px;
+    border: #8A5E24;
+}
+
+#submit:hover {
+    background-color: #B7C64F;
+    color:#8A5E24;
+    border: #B7C64F;
+}
+
+/*Footer*/
+
+.social-networks {
+    text-align: center;
+    text-decoration: none;
+}
+
+.social-networks li {
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+}
+
+.social-networks i {
+    color: #B7C64F;
+    font-size: 1.5rem;
+    margin: 2px;
+    padding: 5px;
+}
