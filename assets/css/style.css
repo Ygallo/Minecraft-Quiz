@@ -63,6 +63,21 @@ input[type='radio']:checked {
     border: #B7C64F;
 }
 
+/*Progress bar*/
+
+#progress-bar {
+    width: 50vw;
+    background-color: #E9F1C1;
+}
+
+#my-bar {
+    width: 0.5%;
+    height: 10px;
+    background-color: #B7C64F;
+    border: #8A5E24;
+    padding: 5px;
+}
+
 /*Footer*/
 
 .social-networks {

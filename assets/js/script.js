@@ -89,32 +89,31 @@ let index = 0;    // Current question index
 
     let radioA = document.getElementById("radioA");
     radioA.value = quizQuestions[index].answerA;
+    radioA.checked = false;
     let labelA = document.getElementById('labelA');
     labelA.innerHTML  = quizQuestions[index].answerA;
 
     let radioB = document.getElementById("radioB");
     radioB.value = quizQuestions[index].answerB;
+    radioB.checked = false;
     let labelB = document.getElementById('labelB');
     labelB.innerHTML  = quizQuestions[index].answerB;
 
     let radioC = document.getElementById("radioC");
     radioC.value = quizQuestions[index].answerC;
+    radioC.checked = false;
     let labelC = document.getElementById('labelC');
     labelC.innerHTML  = quizQuestions[index].answerC;
 
     let radioD = document.getElementById("radioD");
     radioD.value = quizQuestions[index].answerD;
+    radioD.checked = false;
     let labelD = document.getElementById('labelD');
     labelD.innerHTML  = quizQuestions[index].answerD;
-
-    console.log(radioA.value);
-    console.log(radioB.value);
-    console.log(radioC.value);
-    console.log(radioD.value);
-
   
 }
-displayQuestions();
+
+displayQuestions(); //first question displayed
 
 function checkAnswer() {
     let selected;
@@ -135,6 +134,10 @@ function checkAnswer() {
         alert('incorrect');
         incrementWrongAnswer();
     }
+
+    //progress bar update
+    progressBar();
+
     //check if we have question left
     if(index<quizQuestions.length -1){
         index++;
@@ -142,12 +145,11 @@ function checkAnswer() {
     }else{
         //no more question display game over
         index=0;
+        resetScore();
+        displayQuestions();
+        progressBar();
     }
 
-}
-
-function calculateCorrectAnswer() {
-    
 }
 
 /**
@@ -167,10 +169,19 @@ function incrementWrongAnswer() {
     document.getElementById('incorrect').innerText = ++oldScore;
 }
 
+/**
+ * Resets the score to 0 once all questions are answered
+ */
 
+function resetScore() {
+    document.getElementById('correct').innerText = 0;
+    document.getElementById('incorrect').innerText = 0;
+}
 
-function totalScore() {
-
+function progressBar() {
+    let bar = document.getElementById('my-bar');
+    let progress = (index/quizQuestions.length)*100;
+    bar.style.width = progress + "%";
 }
 
 
