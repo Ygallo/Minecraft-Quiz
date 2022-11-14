@@ -19,17 +19,21 @@
 </head>
 <body>
     <h1>Minecraft Quiz</h1>
-    <section>
+    <section id="quizCont">
         <div class="container">
             <h2 id="question">Question</h2>
             <input type="radio" id="radioA" class="radio.btn" name="radio1" value="A">
-            <label for="radioA" id="labelA">A</label><br>
+            <p id="labelA" class="options">A</p><br>
+            <!--<label for="radioA" id="labelA">A</label><br>-->
             <input type="radio" id="radioB" class="radio.btn" name="radio1" value="B">
-            <label for="radioB" id="labelB" >B</label><br> 
+            <p id="labelB" class="options">B</p><br>
+            <!--<label for="radioB" id="labelB" >B</label><br> -->
             <input type="radio" id="radioC" class="radio.btn" name="radio1" value="C">
-            <label for="radioC" id="labelC">C</label><br>
+            <p id="labelC" class="options">C</p><br>
+            <!--<label for="radioC" id="labelC">C</label><br>-->
             <input type="radio" id="radioD" class="radio.btn" name="radio1" value="D">
-            <label for="radioD" id="labelD">D</label><br>
+            <p id="labelD" class="options">D</p><br>
+            <!--<label for="radioD" id="labelD">D</label><br>-->
             <input type="submit" id="submit" onclick="checkAnswer();">
         </div>
         <div class="score-area">
@@ -42,7 +46,7 @@
         </div>
     </section>
 
-    <!-- Social media icons and link on footer -->
+    <!-- Social media icons and links on footer -->
     <footer>
         <ul class="social-networks">
             <li>

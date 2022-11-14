@@ -115,43 +115,71 @@ let index = 0;    // Current question index
 
 displayQuestions(); //first question displayed
 
+/**
+ * Checking the selected if there is a selected answer,
+ * and if the answers is right or wrong
+ */
+
 function checkAnswer() {
     let selected;
     let radioSelected= document.getElementsByName("radio1");
-     
+    let unchecked=0;
+
+    //checking which radio was selected
     for( let i=0; i< radioSelected.length;i++)
     {
         if(radioSelected[i].checked){
             selected=i;
+        }else{
+            unchecked++;
         }
     }
 
-    if(quizQuestions[index].correct === selected){
-        // hacer lo correta
-        alert('correct');
-        incrementScore()
-    }else{
-        alert('incorrect');
-        incrementWrongAnswer();
+    //checkin if a radiobutton is selected otherwise exiting this function
+    if(unchecked===radioSelected.length){
+        alert("Please select a answer");
+        return;
     }
 
-    //progress bar update
-    progressBar();
+        if(quizQuestions[index].correct === selected){
+            incrementScore()
+        }else{
+            incrementWrongAnswer();
+        }
 
-    //check if we have question left
-    if(index<quizQuestions.length -1){
-        index++;
-        displayQuestions();
-    }else{
-        //no more question display game over
-        index=0;
-        resetScore();
-        displayQuestions();
+        //progress bar update
         progressBar();
-    }
+
+        //check if we have questions left
+        if(index<quizQuestions.length -1){
+            index++;
+            displayQuestions();
+        }else{
+            //no more question display game over
+        // index=0;
+        // resetScore();
+            //displayQuestions();
+        // progressBar();
+        displasFinalScreen();
+        }
 
 }
 
+
+function displasFinalScreen() {
+ console.log('finished');
+    // getting scores
+    let finalIncorrectScore = parseInt(document.getElementById('incorrect').innerText);
+    let finalCorrectScore = parseInt(document.getElementById('correct').innerText);
+
+     let cont = document.getElementById("quizCont");
+     cont.innerHTML =`<div id="finalScreen"> <h2 id= "congrats" class="end-quiz">Congratulations!</h2> 
+     <p id="complete" class="end-quiz">You completed the quiz </p>
+     <div id="final-score" class="end-quiz">You got ${finalCorrectScore} correct Answers and ${finalIncorrectScore} incorrect </div>
+     
+     <input id="play-again" type="submit" id="submit" value="Play Again" onclick="PlayAgain()">
+     </div>`;
+}
 /**
  * Gets current score from the DOM and increments by 1
  */
@@ -165,6 +193,7 @@ function incrementScore() {
  * Gets current incorrect score from the DOM and increments by 1
  */
 function incrementWrongAnswer() {
+
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore;
 }
@@ -174,16 +203,55 @@ function incrementWrongAnswer() {
  */
 
 function resetScore() {
+
     document.getElementById('correct').innerText = 0;
     document.getElementById('incorrect').innerText = 0;
 }
 
+/**
+ * Shows the progress of the game as the user advance with the questions
+ */
+
 function progressBar() {
+
     let bar = document.getElementById('my-bar');
     let progress = (index/quizQuestions.length)*100;
     bar.style.width = progress + "%";
 }
 
+/**
+ * Restore the Quiz html to play the game again
+ */
+function PlayAgain(){
+    index=0; //get to the first question
+    let cont = document.getElementById("quizCont");
+     cont.innerHTML =`
+     <div class="container">
+            <h2 id="question">Question</h2>
+            <input type="radio" id="radioA" class="radio.btn" name="radio1" value="A">
+            <p id="labelA" class="options">A</p><br>
+            <!--<label for="radioA" id="labelA">A</label><br>-->
+            <input type="radio" id="radioB" class="radio.btn" name="radio1" value="B">
+            <p id="labelB" class="options">B</p><br>
+            <!--<label for="radioB" id="labelB" >B</label><br> -->
+            <input type="radio" id="radioC" class="radio.btn" name="radio1" value="C">
+            <p id="labelC" class="options">C</p><br>
+            <!--<label for="radioC" id="labelC">C</label><br>-->
+            <input type="radio" id="radioD" class="radio.btn" name="radio1" value="D">
+            <p id="labelD" class="options">D</p><br>
+            <!--<label for="radioD" id="labelD">D</label><br>-->
+            <input type="submit" id="submit" onclick="checkAnswer();">
+        </div>
+        <div class="score-area">
+            <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct Answers <span id="correct">0</span></p>
+            <p class="scores"><i class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
+        </div>
+
+        <div id="progress-bar">
+            <div id="my-bar"></div>
+        </div>`;
+       displayQuestions();
+}
 
 
 
