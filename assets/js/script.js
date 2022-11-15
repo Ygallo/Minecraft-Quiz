@@ -24,10 +24,17 @@ fetch("./questions.json")
  .then((response) => response.json())
  .then((json) => {
    quizQuestions = json;
+   
+   shuffle(quizQuestions);
+   
    displayQuestions(); //first question displayed
  });
  
- 
+
+ function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+  }
+
 let index = 0;    // Current question index
 
 /**
@@ -102,21 +109,23 @@ function checkAnswer() {
         //progress bar update
         progressBar();
 
+        let maxLimit=0;
+        // check how many question I have
+        if(quizQuestions.length>11){
+            maxLimit=11;
+        }else{
+            maxLimit=quizQuestions.length;
+        }
         //check if we have questions left
-        if(index<quizQuestions.length -1){
+        if(index<maxLimit -1){
             index++;
             displayQuestions();
         }else{
             //no more question display game over
-        // index=0;
-        // resetScore();
-            //displayQuestions();
-        // progressBar();
         displasFinalScreen();
         }
 
 }
-
 
 function displasFinalScreen() {
  console.log('finished');
@@ -204,8 +213,9 @@ function PlayAgain(){
             <!--<label for="radioD" id="labelD">D</label><br>-->
             <input type="submit" id="submit" onclick="checkAnswer();">
         </div>`;
-       displayQuestions();
-       attachEvents();
+    shuffle(quizQuestions);
+    displayQuestions();
+    attachEvents();
 }
 
 
