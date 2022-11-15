@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding:0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 body {
@@ -42,10 +42,10 @@ max-width: 80rem;
 input[type='radio'] {
     box-sizing: border-box;
     appearance: none;
-    background: #E9F1C1;
-    border: 3px solid #B7C64F;
-    width: 24px;
-    height: 24px;
+    background: #B7C64F;
+    border: 4px solid #E9F1C1;
+    /* width: 31px; */
+    /* height: 32px; */
     padding: 10px;
     
 }
@@ -68,13 +68,14 @@ input[type='radio']:checked {
     background-color: #E9F1C1;
     font-family: "open sans", sans-serif;
     width: 80%;
-    border: 3px solid #B7C64F;
-    padding: 5px;
-    margin-bottom: 15px;
+    height: 25px;
+    border: 2px solid #B7C64F;
+    margin-bottom: 20px;
     text-align: center;
     font-weight: 400;
-
+    vertical-align: middle;
 }
+
 .form-radio-item, .form-checkbox-item {
     width: 100% !important;
     max-width: none !important;
@@ -101,6 +102,20 @@ input[type='radio']:checked {
     border: #B7C64F;
 }
 
+/*Score area*/
+.scores {
+    font-family: "fira sans", sans-serif;
+    text-align: center;
+    display: inline-block;
+    color: #8A5E24;
+    padding: 10px;
+}
+
+.scores i {
+    color: #B7C64F;
+    font-size: 1.5rem;
+    padding: 0 10px;
+}
 
 /*Final Screen- Game over*/
 .end-quiz {
