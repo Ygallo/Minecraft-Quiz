@@ -20,30 +20,33 @@
 <body>
     <h1>Minecraft Quiz</h1>
     <section id="quizCont">
+        <div id="progress">
+            <div class="score-area">
+                <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct Answers <span id="correct">0</span></p>
+                <p class="scores"><i class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
+            </div>
+
+            <div id="progress-bar">
+                <div id="my-bar"></div>
+            </div>
+        </div>
         <div class="container">
             <h2 id="question">Question</h2>
             <input type="radio" id="radioA" class="radio.btn" name="radio1" value="A">
             <p id="labelA" class="options">A</p><br>
-            <!--<label for="radioA" id="labelA">A</label><br>-->
+            
             <input type="radio" id="radioB" class="radio.btn" name="radio1" value="B">
             <p id="labelB" class="options">B</p><br>
-            <!--<label for="radioB" id="labelB" >B</label><br> -->
+            
             <input type="radio" id="radioC" class="radio.btn" name="radio1" value="C">
             <p id="labelC" class="options">C</p><br>
-            <!--<label for="radioC" id="labelC">C</label><br>-->
+            
             <input type="radio" id="radioD" class="radio.btn" name="radio1" value="D">
             <p id="labelD" class="options">D</p><br>
-            <!--<label for="radioD" id="labelD">D</label><br>-->
+            
             <input type="submit" id="submit" onclick="checkAnswer();">
         </div>
-        <div class="score-area">
-            <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct Answers <span id="correct">0</span></p>
-            <p class="scores"><i class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
-        </div>
-
-        <div id="progress-bar">
-            <div id="my-bar"></div>
-        </div>
+        
     </section>
 
     <!-- Social media icons and links on footer -->
@@ -59,6 +62,7 @@
             </li>
         </ul>
     </footer>
+<!--javascript file-->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -167,7 +167,7 @@ function resetScore() {
 function progressBar() {
 
     let bar = document.getElementById('my-bar');
-    let progress = (index/quizQuestions.length)*100;
+    let progress = ((index+1)/quizQuestions.length)*100;
     bar.style.width = progress + "%";
 }
 
@@ -178,6 +178,16 @@ function PlayAgain(){
     index=0; //get to the first question
     let cont = document.getElementById("quizCont");
      cont.innerHTML =`
+     <div id="progress">
+            <div class="score-area">
+                <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct Answers <span id="correct">0</span></p>
+                <p class="scores"><i class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
+            </div>
+
+            <div id="progress-bar">
+                <div id="my-bar"></div>
+            </div>
+     </div>
      <div class="container">
             <h2 id="question">Question</h2>
             <input type="radio" id="radioA" class="radio.btn" name="radio1" value="A">
@@ -193,14 +203,6 @@ function PlayAgain(){
             <p id="labelD" class="options">D</p><br>
             <!--<label for="radioD" id="labelD">D</label><br>-->
             <input type="submit" id="submit" onclick="checkAnswer();">
-        </div>
-        <div class="score-area">
-            <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct Answers <span id="correct">0</span></p>
-            <p class="scores"><i class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
-        </div>
-
-        <div id="progress-bar">
-            <div id="my-bar"></div>
         </div>`;
        displayQuestions();
        attachEvents();
