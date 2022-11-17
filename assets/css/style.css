@@ -15,21 +15,18 @@ h1 {
     color: #B7C64F;
     letter-spacing: 5px;
     font-size: 70px;
-    margin: 1.5rem;
+    margin: 1rem;
     text-align: center;
 }
-
-#logo{}
-
 
 /* Quiz questions and answers*/
 
 .container, #progress {
-width: 100vw;
+width: 100%;
 margin: 0 auto;
 justify-items: center;
 align-items: center;
-padding: 2rem;
+padding: 1rem;
 max-width: 80rem;
 }
 
@@ -40,6 +37,7 @@ max-width: 80rem;
     padding-bottom: 15px;
     letter-spacing: 2px;
     text-align: center;
+    width: 80%;
 }
 
 input[type='radio'] {
@@ -70,6 +68,12 @@ input[type='radio']:checked {
     vertical-align: middle;
 }
 
+.options:hover {
+    background-color: #B7C64F;
+    color:#302C1F;
+    border: #B7C64F;
+}
+
 .form-radio-item, .form-checkbox-item {
     width: 100% !important;
     max-width: none !important;
@@ -87,7 +91,7 @@ input[type='radio']:checked {
     background-color: #8A5E24;
     margin-top: 20px;
     border: #8A5E24;
-    width: 100%;
+    width: 83%;
 }
 
 #submit:hover {
@@ -99,7 +103,6 @@ input[type='radio']:checked {
 /*Score area*/
 
 #progress {
-    width: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -107,6 +110,7 @@ input[type='radio']:checked {
 .score-area {
     align-items: center;
     justify-content: center;
+    padding-bottom: 15px;
 }
 
 .scores {
@@ -114,7 +118,8 @@ input[type='radio']:checked {
     text-align: center;
     display: inline-block;
     color: #8A5E24;
-    padding: 10px;
+    padding: 5px;
+    width: 40%;
 }
 
 .scores i {
@@ -123,6 +128,9 @@ input[type='radio']:checked {
     padding: 0 10px;
 }
 
+#incorrect {
+    color: #922707;
+}
 /*Progress bar*/
 
 #progress-bar {
@@ -181,9 +189,10 @@ input[type='radio']:checked {
 
 /*Footer*/
 footer{
-    background-image: url("../images/footer-background.png");
+    width: 85%;
+    /*background-image: url("../images/footer-background.png");
     background-repeat: repeat-x;
-    height: 262px;
+    height: 262px;*/
 }
 .social-networks {
     text-align: center;

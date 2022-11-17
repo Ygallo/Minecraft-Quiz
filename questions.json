@@ -114,14 +114,14 @@
     },{
         "question": "What item can sugar cane make?",
         "answerA": "Paper",
-        "answerB": "Coockie",
+        "answerB": "Cookie",
         "answerC": "Book and quill",
-        "answerD": "",
+        "answerD": "Maps",
         "correct": 0
     },{
         "question": "A Husk is a type of zombie found in only one place. Where is this?",
         "answerA": "Water",
-        "answerB": "VIllage",
+        "answerB": "Village",
         "answerC": "Desert",
         "answerD": "Jungle",
         "correct": 2
