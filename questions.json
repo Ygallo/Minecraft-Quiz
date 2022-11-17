@@ -69,5 +69,110 @@
         "answerC": "Rabbit",
         "answerD": "Pig",
         "correct": 0
+    },{
+        "question": "How many types of flowers are there? ",
+        "answerA": 18,
+        "answerB": 13,
+        "answerC": 17,
+        "answerD": 15,
+        "correct": 2
+    },{
+        "question": "To create 1 iron pickaxe, what materials do you need?",
+        "answerA": "2 sticks and 2 iron ingots",
+        "answerB": "2 sticks and 1 iron ingots",
+        "answerC": "1 sticks and 2 iron ingots",
+        "answerD": "3 sticks and 2 iron ingots",
+        "correct": 0
+    },{
+        "question": "The sounds made by Ghasts come from what real animal? ",
+        "answerA": "Lion",
+        "answerB": "Lynx",
+        "answerC": "Cheetah",
+        "answerD": "Cat",
+        "correct": 3
+    },{
+        "question": "What language is Enderman?",
+        "answerA": "Russian",
+        "answerB": "English backwards",
+        "answerC": "German",
+        "answerD": "French backwards",
+        "correct": 1
+    },{
+        "question": "What was the game initially going to be called?",
+        "answerA": "Block Game",
+        "answerB": "Mine Game",
+        "answerC": "Cave Game",
+        "answerD": "Craft Block",
+        "correct": 2
+    },{
+        "question": "What is terrified of Ocelots?",
+        "answerA": "Zombie",
+        "answerB": "Creepers",
+        "answerC": "Skeleton",
+        "answerD": "Wolf",
+        "correct": 1
+    },{
+        "question": "What item can sugar cane make?",
+        "answerA": "Paper",
+        "answerB": "Coockie",
+        "answerC": "Book and quill",
+        "answerD": "",
+        "correct": 0
+    },{
+        "question": "A Husk is a type of zombie found in only one place. Where is this?",
+        "answerA": "Water",
+        "answerB": "VIllage",
+        "answerC": "Desert",
+        "answerD": "Jungle",
+        "correct": 2
+    },{
+        "question": "What creature can you control with a carrot on a stick?",
+        "answerA": "Stryder",
+        "answerB": "Rabbit",
+        "answerC": "Donkey",
+        "answerD": "Pigs",
+        "correct": 3
+    },{
+        "question": "As well as hay bales, what else will a Llama eat?",
+        "answerA": "Sugar",
+        "answerB": "Wheat",
+        "answerC": "Carrots",
+        "answerD": "Grass",
+        "correct": 1
+    },{
+        "question": "What problem does tonic cure?", 
+        "answerA": "Poison",
+        "answerB": "Blindness",
+        "answerC": "Nausea",
+        "answerD": "Hunger",
+        "correct": 2
+    },{
+        "question": "How many sets of wool must you have to make a bed?",
+        "answerA": 3,
+        "answerB": 2,
+        "answerC": 4,
+        "answerD": 1,
+        "correct": 0
+    },{
+        "question": "What color is Steve's outfit?",
+        "answerA": "Blue",
+        "answerB": "Turquoise",
+        "answerC": "Cyan",
+        "answerD": "Light Blue",
+        "correct": 0
+    },{
+        "question": "What is the rarest item in Minecraft?",
+        "answerA": "Totem of Undying",
+        "answerB": "Dragon egg",
+        "answerC": "Beacon",
+        "answerD": "Music Disc",
+        "correct": 1
+    },{
+        "question": "How many BAFTA awards has the game won?",
+        "answerA": 0,
+        "answerB": 1,
+        "answerC": 2,
+        "answerD": 3,
+        "correct": 3
     }
     ]

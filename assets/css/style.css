@@ -19,6 +19,9 @@ h1 {
     text-align: center;
 }
 
+#logo{}
+
+
 /* Quiz questions and answers*/
 
 .container, #progress {
@@ -177,7 +180,11 @@ input[type='radio']:checked {
 
 
 /*Footer*/
-
+footer{
+    background-image: url("../images/footer-background.png");
+    background-repeat: repeat-x;
+    height: 262px;
+}
 .social-networks {
     text-align: center;
     text-decoration: none;
