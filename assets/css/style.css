@@ -11,7 +11,7 @@ body {
 /*header and logo*/
 
 h1 {
-    font-family: "fira sans", sans-serif;
+    font-family: 'VT323', monospace;
     color: #B7C64F;
     letter-spacing: 5px;
     font-size: 70px;
@@ -32,13 +32,13 @@ max-width: 80rem;
 
 #question {
     color: #E9F1C1;
-    font-family: "Fira-sans", sans-serif;
-    font-size: 20px;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
     padding-bottom: 15px;
     letter-spacing: 2px;
     text-align: center;
     width: 80%;
-}
+    }
 
 input[type='radio'] {
     box-sizing: border-box;
@@ -58,20 +58,21 @@ input[type='radio']:checked {
 .options {
     display: inline-block;
     background-color: #E9F1C1;
-    font-family: "open sans", sans-serif;
+    font-family: 'VT323', monospace;
     width: 80%;
     height: 25px;
     border: 2px solid #B7C64F;
     margin-bottom: 20px;
     text-align: center;
-    font-weight: 400;
+    font-size: 25px;
     vertical-align: middle;
+    font-weight: bolder;
 }
 
-.options:hover {
+.options:hover, .answer-selected {
     background-color: #B7C64F;
-    color:#302C1F;
-    border: #B7C64F;
+    color: #302C1F;
+    border: 2px solid #627E43;
 }
 
 .form-radio-item, .form-checkbox-item {
@@ -82,9 +83,9 @@ input[type='radio']:checked {
 /*Submit answer button*/
   
 #submit {
-    font-size: 20px;
+    font-size: 30px;
     padding: 10px;
-    font-family: "open sans", sans-serif;
+    font-family: 'VT323', monospace;
     text-align: center;
     text-transform: uppercase;
     color:#E9F1C1;
@@ -114,10 +115,11 @@ input[type='radio']:checked {
 }
 
 .scores {
-    font-family: "fira sans", sans-serif;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
     text-align: center;
     display: inline-block;
-    color: #8A5E24;
+    color: #E9F1C1;
     padding: 5px;
     width: 40%;
 }
@@ -128,8 +130,8 @@ input[type='radio']:checked {
     padding: 0 10px;
 }
 
-#incorrect {
-    color: #922707;
+#wrong {
+    color: #b73710;
 }
 /*Progress bar*/
 
@@ -142,7 +144,7 @@ input[type='radio']:checked {
 
 #my-bar {
     width: 0.5%;
-    background-color: #8b9833;
+    background-color: #627E43;
     border: #8A5E24;
     padding: 5px;
     margin-left: -25px;
@@ -151,7 +153,7 @@ input[type='radio']:checked {
 
 /*Final Screen- Game over*/
 .end-quiz {
-    font-family: "fira sans", sans-serif;
+    font-family: 'VT323', monospace;
     text-align: center;
     color: #E9F1C1;
     padding: 15px;
@@ -176,7 +178,7 @@ input[type='radio']:checked {
     display: block;
     font-size: 20px;
     padding: 10px;
-    font-family: "open sans", sans-serif;
+    font-family: "VT323", monospace;
     text-align: center;
     text-transform: uppercase;
     color:#E9F1C1;
@@ -186,10 +188,14 @@ input[type='radio']:checked {
     width: 100%;
 }
 
+#play-again:hover {
+    background-color: #B7C64F;
+    color:#627E43;
+}
 
 /*Footer*/
 footer{
-    width: 85%;
+    width: 100%;
     /*background-image: url("../images/footer-background.png");
     background-repeat: repeat-x;
     height: 262px;*/
@@ -198,6 +204,7 @@ footer{
     text-align: center;
     text-decoration: none;
     margin: 50px 20px;
+    width: 85%;
 }
 
 .social-networks li {

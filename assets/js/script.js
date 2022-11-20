@@ -6,17 +6,27 @@ function attachEvents(){
 
     for (let i=0; i< options.length; i++) {
         options[i].addEventListener ("click",function(){
-            //cheque el radio button de ese paragraph
+            //checks the radio button of paragraph
             radio[i].checked = true;
+            checkIfOtherIsSelected(i);
+            options[i].classList.add("answer-selected");
         } );
         
     }
-};
+}
 
-
-
+function checkIfOtherIsSelected(current){
+    let options = document.getElementsByClassName("options");
+    for (let i=0; i< options.length;i++){
+        if(i!==current){
+            // i dont remov
+            options[i].classList.remove("answer-selected");
+        }
+    }
+}
 /**
  * link to the .json file with the quiz Questions
+ * Shuffles and loads first question
  */
 let quizQuestions;
 
@@ -42,7 +52,7 @@ let index = 0;    // Current question index
  * as the user aswers them
  */
  function displayQuestions() {
-    //console.log(quizQuestions);
+    
     let question = document.getElementById("question");
     question.innerHTML = quizQuestions[index].question;
 
@@ -72,26 +82,27 @@ let index = 0;    // Current question index
   
 }
 
-
-
 /**
- * Checking the selected if there is a selected answer,
+ * Checking the selection, if there is a selected answer,
  * and if the answers is right or wrong
  */
 
 function checkAnswer() {
     let selected;
+    let options = document.getElementsByClassName("options"); //paragraph
     let radioSelected= document.getElementsByName("radio1");
     let unchecked=0;
 
     //checking which radio was selected
     for( let i=0; i< radioSelected.length;i++)
     {
+        options[i].classList.remove("answer-selected");// resets all seletect paragraphs
         if(radioSelected[i].checked){
             selected=i;
-        }else{
+            //options[i].classList.add("answer-selected");
+        }else{ 
             unchecked++;
-        }
+        } 
     }
 
     //checkin if a radiobutton is selected otherwise exiting this function
@@ -101,7 +112,7 @@ function checkAnswer() {
     }
 
         if(quizQuestions[index].correct === selected){
-            incrementScore()
+            incrementScore();
         }else{
             incrementWrongAnswer();
         }
@@ -111,8 +122,8 @@ function checkAnswer() {
 
         let maxLimit=0;
         // check how many question I have
-        if(quizQuestions.length>11){
-            maxLimit=11;
+        if(quizQuestions.length>10){
+            maxLimit=10;
         }else{
             maxLimit=quizQuestions.length;
         }
@@ -124,9 +135,10 @@ function checkAnswer() {
             //no more question display game over
         displasFinalScreen();
         }
-
 }
-
+/**
+ * If game is finished, display final screen, and scores.
+ */
 function displasFinalScreen() {
  console.log('finished');
     // getting scores
@@ -136,7 +148,7 @@ function displasFinalScreen() {
      let cont = document.getElementById("quizCont");
      cont.innerHTML =`<div id="finalScreen"> <h2 id= "congrats" class="end-quiz">Congratulations!</h2> 
      <p id="complete" class="end-quiz">You completed the quiz </p>
-     <div id="final-score" class="end-quiz">You got ${finalCorrectScore} correct Answers and ${finalIncorrectScore} incorrect </div>
+     <div id="final-score" class="end-quiz">You got ${finalCorrectScore} correct answers and ${finalIncorrectScore} incorrect </div>
      
      <input id="play-again" type="submit" id="submit" value="Play Again" onclick="PlayAgain()">
      </div>`;
@@ -176,7 +188,7 @@ function resetScore() {
 function progressBar() {
 
     let bar = document.getElementById('my-bar');
-    let progress = ((index+1)/quizQuestions.length)*100;
+    let progress = ((index+1)/10)*100;
     bar.style.width = progress + "%";
 }
 
@@ -190,7 +202,7 @@ function PlayAgain(){
      <div id="progress">
             <div class="score-area">
                 <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct Answers <span id="correct">0</span></p>
-                <p class="scores"><i class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
+                <p class="scores"><i d="wrong" class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
             </div>
 
             <div id="progress-bar">
