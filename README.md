@@ -46,14 +46,19 @@ The site implements standart HTML and CSS features , as well as Javascrip for th
 - This section contains final feedback of correct and incorrect answers and Play again button.
 - Play Again button will bring user back to home page of the quiz, and start the quiz again.  
 
+![end game](assets/images/end-game.jpg)
+
 ### **The Footer**
 - The footer section includes links to the relevant social media sites for the Quiz. The links will open to a new tab to allow easy navigation for the user.
 - The footer is consistent througout all pages.
+
+![footer](assets/images/footer.jpg)
 
 ## Features Left to Implement
 - Add highscore leaderboard.
 - Add more questions to the game, and to the pool of question with harder levels available.
 - Add a timer for the questions.
+- Create custom messages for each level of results.
 
 
 
