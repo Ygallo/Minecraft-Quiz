@@ -93,7 +93,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 3. From the source section drop-down menu, select the Main Branch, and click SAVE.
 4. After several minutes the website is live and will be automatically refreshed with each Git push command.
 
-The link to the live site is:
+The link to the live site is: https://ygallo.github.io/Minecraft-Quiz/
  
 ## Credits
 

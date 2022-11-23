@@ -201,28 +201,28 @@ function PlayAgain(){
      cont.innerHTML =`
      <div id="progress">
             <div class="score-area">
-                <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct Answers <span id="correct">0</span></p>
-                <p class="scores"><i d="wrong" class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect Answers <span id="incorrect">0</span></p>
+                <p class="scores"><i class="fa-sharp fa-solid fa-square-check"></i>Correct <span id="correct">0</span></p>
+                <p class="scores"><i id="wrong" class="fa-sharp fa-solid fa-square-xmark"></i>Incorrect <span id="incorrect">0</span></p>
             </div>
 
             <div id="progress-bar">
                 <div id="my-bar"></div>
             </div>
-     </div>
-     <div class="container">
+        </div>
+        <div class="container">
             <h2 id="question">Question</h2>
-            <input type="radio" id="radioA" class="radio.btn" name="radio1" value="A">
+            <input type="radio" id="radioA" name="radio1" value="A" aria-label="radio-button-A">
             <p id="labelA" class="options">A</p><br>
-            <!--<label for="radioA" id="labelA">A</label><br>-->
-            <input type="radio" id="radioB" class="radio.btn" name="radio1" value="B">
+            
+            <input type="radio" id="radioB" name="radio1" value="B" aria-label="radio-button-B">
             <p id="labelB" class="options">B</p><br>
-            <!--<label for="radioB" id="labelB" >B</label><br> -->
-            <input type="radio" id="radioC" class="radio.btn" name="radio1" value="C">
+            
+            <input type="radio" id="radioC" name="radio1" value="C" aria-label="radio-button-C">
             <p id="labelC" class="options">C</p><br>
-            <!--<label for="radioC" id="labelC">C</label><br>-->
-            <input type="radio" id="radioD" class="radio.btn" name="radio1" value="D">
+            
+            <input type="radio" id="radioD" name="radio1" value="D" aria-label="radio-button-D">
             <p id="labelD" class="options">D</p><br>
-            <!--<label for="radioD" id="labelD">D</label><br>-->
+            
             <input type="submit" id="submit" onclick="checkAnswer();">
         </div>`;
     shuffle(quizQuestions);
