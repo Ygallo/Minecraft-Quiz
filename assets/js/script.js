@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded",attachEvents);
 
+/**
+ * Checks if an option was selected, and checks the radio button 
+ * of that option. 
+ */
+
 function attachEvents(){
     let options = document.getElementsByClassName("options");
     let radio = document.getElementsByName("radio1");
 
     for (let i=0; i< options.length; i++) {
         options[i].addEventListener ("click",function(){
-            //checks the radio button of paragraph
+            //checks the radio button of corresponding option
             radio[i].checked = true;
             checkIfOtherIsSelected(i);
             options[i].classList.add("answer-selected");
@@ -15,17 +20,22 @@ function attachEvents(){
     }
 }
 
+/**
+ * Checks if an option was selected, and checks the radio button 
+ * of that option. 
+ */
+
 function checkIfOtherIsSelected(current){
     let options = document.getElementsByClassName("options");
     for (let i=0; i< options.length;i++){
         if(i!==current){
-            // i dont remov
+            
             options[i].classList.remove("answer-selected");
         }
     }
 }
 /**
- * link to the .json file with the quiz Questions
+ * Link to the .json file with the quiz Questions
  * Shuffles and loads first question
  */
 let quizQuestions;
@@ -79,8 +89,7 @@ let index = 0;    // Current question index
     radioD.checked = false;
     let labelD = document.getElementById('labelD');
     labelD.innerHTML  = quizQuestions[index].answerD;
-  
-}
+ }
 
 /**
  * Checking the selection, if there is a selected answer,
@@ -90,26 +99,33 @@ let index = 0;    // Current question index
 function checkAnswer() {
     let selected;
     let options = document.getElementsByClassName("options"); //paragraph
-    let radioSelected= document.getElementsByName("radio1");
+    let radioSelected= document.getElementsByName("radio1"); // radio button
     let unchecked=0;
 
     //checking which radio was selected
     for( let i=0; i< radioSelected.length;i++)
     {
-        options[i].classList.remove("answer-selected");// resets all seletect paragraphs
+        options[i].classList.remove("answer-selected");// resets all selected paragraphs
         if(radioSelected[i].checked){
             selected=i;
-            //options[i].classList.add("answer-selected");
         }else{ 
             unchecked++;
         } 
     }
 
-    //checkin if a radiobutton is selected otherwise exiting this function
+    /**
+     * Checks if a radiobutton is selected, if not alerting the user to select option. 
+     * Otherwise exiting this function.
+     */
     if(unchecked===radioSelected.length){
         alert("Please select a answer");
         return;
     }
+
+    /**
+     * Checks if a selected option is the correct option to increment score,
+     * for right or wrong
+     */
 
         if(quizQuestions[index].correct === selected){
             incrementScore();
@@ -117,17 +133,17 @@ function checkAnswer() {
             incrementWrongAnswer();
         }
 
-        //progress bar update
+        //Progress bar update
         progressBar();
 
         let maxLimit=0;
-        // check how many question I have
+        // Check how many question I have
         if(quizQuestions.length>10){
             maxLimit=10;
         }else{
             maxLimit=quizQuestions.length;
         }
-        //check if we have questions left
+        //Check if we have questions left
         if(index<maxLimit -1){
             index++;
             displayQuestions();
