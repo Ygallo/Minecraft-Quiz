@@ -67,6 +67,25 @@ The site implements standart HTML and CSS features , as well as Javascrip for th
 - I have tested that this website works in Chrome, Firefox and Microsoft Edge.
 - I have tested this webpage using the devtools devise tools bar to make sure it is responsive and functions on different screen sizes.
 
+## Bugs
+
+- When creating the questions and answers as an object, the whole code was giving an error. In trying to find the culprit, I discover I was missing some colons, and ‘’ for the string. This still it did not fixed the original problem, finally after reviewing the lessons and googling it, I realized that since there where so many questions I needed to create an Array of objects. 
+
+- The font awesome icons for the scores have different colors (red and green), but on reloading the game, they both appear green. I discover first,  that the ID that styled the icons was not added on the javascript function that reloaded the game. Second, after adding the ID, there was a typo and once found the issue was resolved. This type of problem, with different code on html and javascript, by omission on the later, was reiterated, but once I discover it the first time, the others where resolved quicker.
+
+- Originally, the accessibility score in lighthouse was 91%, and the error displayed was “form elements do not have associated labels” - This was resolved by adding aria-labels to the 4 inputs.
+
+- On the final test of the game, it came to my tutor atention that one of the anwers options (the only one that has more text), one of the words was displayed.
+
+- On the final test of the game, it came to my tutor atention that one of the anwers options (the only one that has more text), one of the words was displayed outside of the color div and was very hard to see. I resolve this by adding a media query for smaller screens. 
+
+- Also, on the final screen the Congratulations was too big to fit, this was adjusted also with the media query.
+
+
+## Unfixed Bugs
+
+Currently there are none unfixed bugs.
+
 ## Validator Testing
 
 - **HTML**
@@ -88,13 +107,11 @@ No errors were found when passing through the official Jshint validator. The fol
 
 - **Accessibility -Lighthouse-**
 
-Performance was affected by Chrome Extensions, on auditing the quiz on Incongnito tab, the performance when up to 100.
+Performance was affected by Chrome Extensions, on auditing the quiz on Incongnito tab, the performance when up to 98.
 
 ![Accesibility](assets/images/lighthouse.jpg)
 
-## Unfixed Bugs
-
-Currently there are none unfixed bugs.
+![Accesibility](assets/images/lighthouse-incognito.jpg)
 
 ## Deployment
 
