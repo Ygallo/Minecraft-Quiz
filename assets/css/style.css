@@ -26,8 +26,6 @@ h1 {
     margin: auto;
     justify-items: center;
     align-items: center;
-    /* padding: 20px; */
-    /* max-width: 80%; */
     text-align: center;
 }
 
@@ -154,6 +152,9 @@ input[type='radio']:checked {
 
 
 /*Final Screen- Game over*/
+#quizCont {
+    text-align: center;
+}
 .end-quiz {
     font-family: 'VT323', monospace;
     text-align: center;
@@ -168,7 +169,6 @@ input[type='radio']:checked {
 
 #complete {
     font-size: 35px;
-
 }
 
 #final-score {
@@ -177,8 +177,7 @@ input[type='radio']:checked {
 }
 
 #play-again {
-    display: block;
-    font-size: 20px;
+    font-size: 30px;
     padding: 10px;
     font-family: "VT323", monospace;
     text-align: center;
@@ -187,7 +186,7 @@ input[type='radio']:checked {
     background-color: #8A5E24;
     margin-top: 20px;
     border: #8A5E24;
-    width: 100%;
+    width: 84%;
 }
 
 #play-again:hover {
@@ -223,4 +222,24 @@ footer{
     font-size: 1.5rem;
     margin: 2px;
     padding: 5px;
+}
+
+/*For small screen sizes 500px wide and down*/
+
+@media (max-width: 320px){
+    .options {
+        font-size: 19px;
+    }
+    #congrats {
+        font-size: 40px;
+    }
+    #complete {
+        font-size: 30px;
+        } 
+    #submit {
+        width: 93%;   
+}
+#question {
+    font-size:25px;
+}
 }

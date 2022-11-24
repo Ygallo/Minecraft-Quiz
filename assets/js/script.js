@@ -198,7 +198,7 @@ function resetScore() {
 }
 
 /**
- * Shows the progress of the game as the user advance with the questions
+ * Shows the progress bar of the game as the user advance with the questions
  */
 
 function progressBar() {

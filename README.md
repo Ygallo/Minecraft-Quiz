@@ -1,6 +1,8 @@
-# Minecraft Quiz
+# **Minecraft Quiz**
 
 The Minecraft Quiz site is targeted to kids who love to play Minecraft and would like to test their knowledge. The site is fully responsive multiple choice quiz and which allows the user to choose and answer from the prompted options. The results of correct and incorrect answer are updates as the user advance through the game.
+
+![Minecraft Quiz](assets/images/responsiveness.jpg)
 
 ## Color Scheme and Typography
 
@@ -60,7 +62,10 @@ The site implements standart HTML and CSS features , as well as Javascrip for th
 - Add a timer for the questions.
 - Create custom messages for each level of results.
 
+## Testing
 
+- I have tested that this website works in Chrome, Firefox and Microsoft Edge.
+- I have tested this webpage using the devtools devise tools bar to make sure it is responsive and functions on different screen sizes.
 
 ## Validator Testing
 
@@ -80,6 +85,12 @@ No errors were found when passing through the official Jshint validator. The fol
 - Function with the largest signature take 1 arguments, while the median is 0.
 - Largest function has 24 statements in it, while the median is 3.
 - The most complex function has a cyclomatic complexity value of 7 while the median is 1.
+
+- **Accessibility -Lighthouse-**
+
+Performance was affected by Chrome Extensions, on auditing the quiz on Incongnito tab, the performance when up to 100.
+
+![Accesibility](assets/images/lighthouse.jpg)
 
 ## Unfixed Bugs
 
