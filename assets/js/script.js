@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",attachEvents);
 
 /**
- * Checks if an option was selected, and checks the radio button 
+ * Checks if an option was selected, and selects the radio button 
  * of that option. 
  */
 
@@ -21,15 +21,14 @@ function attachEvents(){
 }
 
 /**
- * Checks if an option was selected, and checks the radio button 
- * of that option. 
+ * Selected the last option clicked, and checks that only one 
+ *  option is selected. 
  */
 
 function checkIfOtherIsSelected(current){
     let options = document.getElementsByClassName("options");
     for (let i=0; i< options.length;i++){
         if(i!==current){
-            
             options[i].classList.remove("answer-selected");
         }
     }
@@ -58,7 +57,7 @@ fetch("./questions.json")
 let index = 0;    // Current question index
 
 /**
- * Loads the quizQuestions on the page and loops through them
+ * Loads the quizQuestions and options on the page, loops through them
  * as the user aswers them
  */
  function displayQuestions() {
@@ -149,14 +148,14 @@ function checkAnswer() {
             displayQuestions();
         }else{
             //no more question display game over
-        displasFinalScreen();
+        displayFinalScreen();
         }
 }
 /**
  * If game is finished, display final screen, and scores.
  */
-function displasFinalScreen() {
- console.log('finished');
+function displayFinalScreen() {
+ 
     // getting scores
     let finalIncorrectScore = parseInt(document.getElementById('incorrect').innerText);
     let finalCorrectScore = parseInt(document.getElementById('correct').innerText);

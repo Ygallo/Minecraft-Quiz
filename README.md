@@ -67,6 +67,20 @@ The site implements standart HTML and CSS features , as well as Javascrip for th
 - I have tested that this website works in Chrome, Firefox and Microsoft Edge.
 - I have tested this webpage using the devtools devise tools bar to make sure it is responsive and functions on different screen sizes.
 
+
+ | Working function  | Chrome|Firefox| Edge|
+ | ------------------|:-----:|:-----:|:---:|
+ | Quiz displayed correctly| ✓ | ✓ | ✓ |
+ | Selection of options| ✓ | ✓ | ✓ |
+ | Submit button working |✓ | ✓ | ✓ |
+ | Alert displayed if no option selected| ✓ | ✓ | ✓ |
+ | Increment of scores| ✓ | ✓ | ✓ |
+ | Progress bar working| ✓ | ✓ | ✓ |
+ | External link on new tab| ✓ | ✓ | ✓ |
+ | Media query for small screens| ✓ | ✓ | ✓ |
+ | Play again working| ✓ | ✓ | ✓ |
+
+
 ## Bugs
 
 - When creating the questions and answers as an object, the whole code was giving an error. In trying to find the culprit, I discover I was missing some colons, and ‘’ for the string. This still it did not fixed the original problem, finally after reviewing the lessons and googling it, I realized that since there where so many questions I needed to create an Array of objects. 
@@ -84,7 +98,7 @@ The site implements standart HTML and CSS features , as well as Javascrip for th
 
 ## Unfixed Bugs
 
-Currently there are none unfixed bugs.
+- On Firefox the subbit button is displayed as *SUBMIT QUERY*, but working correctly.
 
 ## Validator Testing
 
