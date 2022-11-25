@@ -1,43 +1,12 @@
 document.addEventListener("DOMContentLoaded",attachEvents);
 
-/**
- * Checks if an option was selected, and selects the radio button 
- * of that option. 
- */
+let quizQuestions; //Question objects
+let index = 0;    // Current question index
 
-function attachEvents(){
-    let options = document.getElementsByClassName("options");
-    let radio = document.getElementsByName("radio1");
-
-    for (let i=0; i< options.length; i++) {
-        options[i].addEventListener ("click",function(){
-            //checks the radio button of corresponding option
-            radio[i].checked = true;
-            checkIfOtherIsSelected(i);
-            options[i].classList.add("answer-selected");
-        } );
-        
-    }
-}
-
-/**
- * Selected the last option clicked, and checks that only one 
- *  option is selected. 
- */
-
-function checkIfOtherIsSelected(current){
-    let options = document.getElementsByClassName("options");
-    for (let i=0; i< options.length;i++){
-        if(i!==current){
-            options[i].classList.remove("answer-selected");
-        }
-    }
-}
 /**
  * Link to the .json file with the quiz Questions
  * Shuffles and loads first question
  */
-let quizQuestions;
 
 fetch("./questions.json")
  .then((response) => response.json())
@@ -53,8 +22,6 @@ fetch("./questions.json")
  function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
   }
-
-let index = 0;    // Current question index
 
 /**
  * Loads the quizQuestions and options on the page, loops through them
@@ -89,6 +56,40 @@ let index = 0;    // Current question index
     let labelD = document.getElementById('labelD');
     labelD.innerHTML  = quizQuestions[index].answerD;
  }
+
+/**
+ * Checks if an option was selected, and selects the radio button 
+ * of that option. 
+ */
+
+function attachEvents(){
+    let options = document.getElementsByClassName("options");
+    let radio = document.getElementsByName("radio1");
+
+    for (let i=0; i< options.length; i++) {
+        options[i].addEventListener ("click",function(){
+            //checks the radio button of corresponding option
+            radio[i].checked = true;
+            checkIfOtherIsSelected(i);
+            options[i].classList.add("answer-selected");
+        } );
+        
+    }
+}
+
+/**
+ * Selected the last option clicked, and checks that only one 
+ *  option is selected. 
+ */
+
+function checkIfOtherIsSelected(current){
+    let options = document.getElementsByClassName("options");
+    for (let i=0; i< options.length;i++){
+        if(i!==current){
+            options[i].classList.remove("answer-selected");
+        }
+    }
+}
 
 /**
  * Checking the selection, if there is a selected answer,
