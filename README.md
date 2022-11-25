@@ -143,8 +143,8 @@ The link to the live site is: https://ygallo.github.io/Minecraft-Quiz/
 - The classlist property was taken from: https://www.w3schools.com/jsref/prop_element_classlist.asp
 - I would like to thanks my Mentor, Andre Aquilina who suggested I added a .jason file to store all the quiz questions and showed me how to do it.
 - My kids who love Minecraft and where the inspiration for this project and also help me with  all the options for the multiple choice and tested the game as I was developing it.
-- My husband who pointed helpful tutorials for me to read, and help me solve my struggles when stuck, and provided feedback on my project.
-- My study group as we kept pushing each other and share helpful information.
+- My husband who pointed helpful tutorials, and provided feedback on my project.
+- My study group as we kept pushing each other and share helpful information and tutorials.
 
 ## Content
 
